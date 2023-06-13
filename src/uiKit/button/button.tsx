@@ -1,17 +1,14 @@
-import react from "react";
 import styles from "./button.module.scss";
 interface Props {
   text: string;
   pen?: "white" | "black";
   background?: Color;
   onClick: () => void;
-  // className: any;
 }
 
 export enum Color {
-  green = "green",
-  red = "red",
-  pink = "pink",
+  green = "#B7C18F",
+  red = "#d7a6ac",
 }
 
 const Button = ({ text, pen, background, onClick }: Props) => {
@@ -24,8 +21,6 @@ const Button = ({ text, pen, background, onClick }: Props) => {
       style={{
         color: pen,
         backgroundColor: background,
-        padding: 20,
-        border: 0,
       }}
     >
       {text}
