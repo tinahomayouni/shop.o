@@ -1,5 +1,5 @@
 import Button from "./uiKit/button/button";
-
+import { Color } from "./uiKit/button/button";
 function App() {
   return (
     <>
@@ -8,14 +8,14 @@ function App() {
         <p> this is about my app</p>
         <Button
           text="-"
-          color="white"
-          background="Red"
+          pen="white"
+          background={Color.red}
           onClick={() => alert("removed")}
         />
         <Button
           text="+"
-          color="white"
-          background="Green"
+          pen="white"
+          background={Color.green}
           onClick={() => alert("added")}
         />
       </div>

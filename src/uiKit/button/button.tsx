@@ -2,23 +2,23 @@ import react from "react";
 import * as style from "./button.scss";
 interface Props {
   text: string;
-  color?: "white" | "black";
-  background?: "Green" | "Red";
+  pen?: "white" | "black";
+  background?: "green" | "red" | "pink";
   onClick: () => void;
 }
 
-enum Color {
+export enum Color {
   green = "green",
   red = "red",
   pink = "pink",
 }
 
-const Button = ({ text, color, background, onClick }: Props) => {
+const Button = ({ text, pen, background, onClick }: Props) => {
   return (
     <button
       onClick={onClick}
       style={{
-        color: color,
+        color: pen,
         backgroundColor: background,
         padding: 20,
         border: 0,
