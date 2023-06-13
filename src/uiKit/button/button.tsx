@@ -1,10 +1,11 @@
 import react from "react";
-import * as style from "./button.scss";
+import styles from "./button.module.scss";
 interface Props {
   text: string;
   pen?: "white" | "black";
-  background?: "green" | "red" | "pink";
+  background?: Color;
   onClick: () => void;
+  // className: any;
 }
 
 export enum Color {
@@ -16,6 +17,9 @@ export enum Color {
 const Button = ({ text, pen, background, onClick }: Props) => {
   return (
     <button
+      className={
+        background === Color.green ? styles.buttonAdd : styles.buttonRemove
+      }
       onClick={onClick}
       style={{
         color: pen,
