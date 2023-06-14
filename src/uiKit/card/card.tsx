@@ -6,10 +6,12 @@ interface Props {
   boxShadow: "yes" | "no";
   text: string;
   image?: string;
+  column: number;
 }
-function Card({ children, boxShadow, text, image }: Props) {
+function Card({ children, boxShadow, text, image, column }: Props) {
   return (
     <div
+      style={{ width: `${column}0%` }}
       className={`${styles.card} ${
         boxShadow === "yes" ? styles.addBoxShadow : ""
       }`}
