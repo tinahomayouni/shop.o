@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <h1>This is my app</h1>
-      <CardHolder column={3}>
+      <CardHolder direction="row" column={10}>
         {Array.from(new Array(6)).map((count, key) => {
           return <div key={key}>this is card {count}</div>;
         })}

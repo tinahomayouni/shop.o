@@ -5,11 +5,15 @@ interface Props {
   column: Number; //number from 0 to 10
   counter?: number[];
   num?: number;
+  direction: "column" | "row";
 }
-function CardHolder({ column, children }: Props) {
+function CardHolder({ column, children, direction }: Props) {
   return (
     <>
-      <div className={styles.card} style={{ width: `${column}0%` }}>
+      <div
+        className={styles.card}
+        style={{ width: `${column}0%`, flexDirection: direction }}
+      >
         {children}
       </div>
     </>
