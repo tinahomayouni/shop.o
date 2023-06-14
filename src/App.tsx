@@ -5,11 +5,9 @@ function App() {
     <>
       <h1>This is my app</h1>
       <CardHolder column={3}>
-        <div>this is Card</div>
-        <div>this is Card</div>
-        <div>this is Card</div>
-        <div>this is Card</div>
-        <div>this is Card</div>
+        {Array.from(new Array(6)).map((count, key) => {
+          return <div key={key}>this is card {count}</div>;
+        })}
       </CardHolder>
     </>
   );

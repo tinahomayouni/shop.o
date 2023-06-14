@@ -3,6 +3,8 @@ import styles from "./style.module.scss";
 interface Props {
   children: ReactNode;
   column: Number; //number from 0 to 10
+  counter?: number[];
+  num?: number;
 }
 function CardHolder({ column, children }: Props) {
   return (
