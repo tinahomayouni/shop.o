@@ -1,12 +1,7 @@
+import Image from "./uiKit/image/image";
+import sag from "./uiKit/card/default-image.jpeg";
 function App() {
-  return (
-    <>
-      <h1>This is my app</h1>
-      <div>
-        <p> this is about my app</p>
-      </div>
-    </>
-  );
+  return <></>;
 }
 
 export default App;
