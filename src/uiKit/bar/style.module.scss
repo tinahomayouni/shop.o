@@ -1,0 +1,26 @@
+@use '../../assets/colors.module';
+
+.box {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: row;
+    a {
+        position: relative;
+        text-decoration: none;
+        color: colors.$purple;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        color:#333
+
+        white-space nowrap;
+        margin: 0px 100px;
+   
+    }
+}
+
+.a {
+    // animation: news 4s infinite linear;
+}
