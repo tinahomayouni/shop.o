@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'dm';
+    src: url(./font/dm.eot);
+    src: url(./font/dm.eot?#iefix) format('embedded-opentype'),
+        url(./font/dm.otf) format('otf'),
+        url(./font/dm.svg#dm) format('svg'),
+        url(./font/dm.ttf) format('truetype'),
+        url(./font/dm.woff) format('woff'),
+        url(./font/dm.woff2) format('woff2');
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: 'dm';
+}
