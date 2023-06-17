@@ -2,12 +2,13 @@ import styles from "./style.module.scss";
 interface Props {
   src?: string;
   round: boolean;
-  width: number;
+  width: string;
+  height: string;
 }
 
-function Image({ src, round, width }: Props) {
+function Image({ src, round, width, height }: Props) {
   return (
-    <div style={{ width: `${width}px`, height: "auto" }}>
+    <div style={{ width: width, height: height, overflow: "hidden" }}>
       <img
         className={`${styles.image} ${round ? styles.round : ""}`}
         src={src}
