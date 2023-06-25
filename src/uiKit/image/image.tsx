@@ -4,11 +4,12 @@ interface Props {
   round: boolean;
   width: string;
   height: string;
+  style: any;
 }
 
-function Image({ src, round, width, height }: Props) {
+function Image({ src, round, width, height, style }: Props) {
   return (
-    <div style={{ width: width, height: height, overflow: "hidden" }}>
+    <div style={{ ...style, width: width, height: height, overflow: "hidden" }}>
       <img
         className={`${styles.image} ${round ? styles.round : ""}`}
         src={src}

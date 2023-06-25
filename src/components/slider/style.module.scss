@@ -4,12 +4,10 @@
     height: 100%;
     width: 100%;
     position: relative;
+    overflow: hidden;
     .slider{
-        overflow: hidden;
         height: 630px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         div{
         
             img{
