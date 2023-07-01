@@ -1,0 +1,26 @@
+@use '../../assets/colors.module';
+.sliderHolder{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .slider{
+        height: 630px;
+        display: flex;
+        div{
+        
+            img{
+
+            }
+        }
+    }
+    .buttonHolder {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top:35%;
+        width: 100%;
+    }
+}
+
