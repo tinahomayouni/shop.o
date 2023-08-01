@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 function Logo() {
   return (
     <>
-      <Image width={100} round={false} src={logo} />
+      <Image width="100px" height="auto" round={false} src={logo} />
     </>
   );
 }

@@ -10,7 +10,13 @@ const Button = ({ text, pen, background, onClick }: Props) => {
   return (
     <button
       className={
-        background === colors.green ? styles.buttonAdd : styles.buttonRemove
+        background === colors.green
+          ? styles.buttonAdd
+          : background === colors.green
+          ? styles.buttonRemove
+          : background === colors.purple
+          ? styles.buttonSlider
+          : ""
       }
       onClick={onClick}
       style={{
