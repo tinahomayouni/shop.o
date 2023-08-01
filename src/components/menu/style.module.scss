@@ -1,0 +1,48 @@
+@use '../../assets/colors.module';
+.menu{
+    display: flex;
+    align-items: center;
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        li{
+            list-style: none;
+            position: relative;
+            margin: 0 20px;
+            padding: 10px 25px;
+            a{
+                text-decoration: none;
+                color: colors.$black;
+            &:hover{
+                text-decoration: none;
+                
+            }
+            }
+            &:hover{
+                background-color:  colors.$red;
+                    color: colors.$red;
+            }
+            &:hover .submenu{
+                display: flex;
+                background-color:colors.$white ;
+                flex-direction: column;
+                width: 100px;
+                
+            }
+
+        }
+        
+    }
+    .submenu{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 41px;
+        >li{
+            padding: 10px 25px;
+                        margin: 0;
+        }
+         
+    }
+}
