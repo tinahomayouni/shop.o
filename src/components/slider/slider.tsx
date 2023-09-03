@@ -1,13 +1,29 @@
 import Button from "../../uiKit/button/button";
 import styles from "./style.module.scss";
 import colors from "../../assets/_colors.module.scss";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useMemo, useState } from "react";
+
+// enum AnimationType {
+//   SMOOTH,
+//   WIGGLY,
+//   REVERSE,
+//   NONE,
+// }
+const AnimationType = {
+  SMOOTH: 0,
+  WIGGLY: 1,
+  REVERSE: 2,
+  NONE: 3,
+} as const;
+type AnimationType = (typeof AnimationType)[keyof typeof AnimationType];
+
 interface Props {
   children: ReactNode[];
   button: boolean;
   dot: boolean;
+  animation: AnimationType | undefined;
 }
-function Slider({ children, button, dot }: Props) {
+function Slider({ children, button, dot, animation }: Props) {
   const [initial, setInitial] = useState(0);
 
   const next = () => {
@@ -20,6 +36,22 @@ function Slider({ children, button, dot }: Props) {
     });
   };
   const prev = () => {};
+
+  const animationFunction = useMemo((): string => {
+    switch (animation) {
+      case AnimationType.SMOOTH:
+        return "ease-in-out 2s";
+      case AnimationType.WIGGLY:
+        return "ease 2s";
+      case AnimationType.REVERSE:
+        return "ease ease";
+      case AnimationType.NONE:
+      case undefined:
+        return "";
+      default:
+        return animation satisfies never;
+    }
+  }, []);
 
   console.log(children, "children");
   return (
