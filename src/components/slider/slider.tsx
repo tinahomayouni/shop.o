@@ -3,19 +3,20 @@ import styles from "./style.module.scss";
 import colors from "../../assets/_colors.module.scss";
 import React, { ReactNode, useMemo, useState } from "react";
 
-// enum AnimationType {
-//   SMOOTH,
-//   WIGGLY,
-//   REVERSE,
-//   NONE,
-// }
-const AnimationType = {
-  SMOOTH: 0,
-  WIGGLY: 1,
-  REVERSE: 2,
-  NONE: 3,
-} as const;
-type AnimationType = (typeof AnimationType)[keyof typeof AnimationType];
+enum AnimationType {
+  SMOOTH,
+  WIGGLY,
+  REVERSE,
+  NONE,
+}
+
+// const AnimationType = {
+//   SMOOTH: 0,
+//   WIGGLY: 1,
+//   REVERSE: 2,
+//   NONE: 3,
+// } as const;
+// type AnimationType = (typeof AnimationType)[keyof typeof AnimationType];
 
 interface Props {
   children: ReactNode[];
